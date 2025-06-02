@@ -38,13 +38,21 @@ def play_Mastermind():
 
     for attempt in range(1, attempts + 1):
         guess = ""
+        adminCheck = bool
         valid_Guess = False
         while not valid_Guess:
             guess = input(f"Attempt {attempt}: ").strip()
             valid_Guess = len(guess) == 4 and all(c in "123456" for c in guess)
             if not valid_Guess:
                 print("Invalid input. Enter 4 digits, each from 1 to 6.")
-            show_Secret(secret_Code) if guess == "cheat" else False
+            if guess == "admin" :
+                adminCheck = True
+                print("Admin mode activated. Type 'cheat' to reveal the secret code.")  
+                guess = input()
+            if guess == "cheat" and adminCheck == True :
+                show_Secret(secret_Code)
+            else : 
+                False
 
         black, white = get_Feedback(secret_Code, guess)
         print(f"Black pegs (correct position): {black}, White pegs (wrong position): {white}")
