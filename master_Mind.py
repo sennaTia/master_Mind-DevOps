@@ -5,9 +5,11 @@ import random
 # 15-8-2024
 # Last mod by DevJan : added loop for replay
 print("MasterMind")
-def generate_Code(length=4, digits=6):
 
+
+def generate_Code(length=4, digits=6):
     return [str(random.randint(1, digits)) for _ in range(length)]
+
 
 def get_Feedback(secret, guess):
     black_Pegs = sum(s == g for s, g in zip(secret, guess))
@@ -47,4 +49,4 @@ if __name__ == "__main__" :
     again='Y'
     while again=='Y' :
         play_Mastermind()
-        again  = input (f"Play again (Y/N) ?").upper()
+        again  = input(f"Play again (Y/N) ?").upper()
