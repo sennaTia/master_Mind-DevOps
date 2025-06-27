@@ -48,13 +48,13 @@ def play_Mastermind():
 
             show_Secret(secret_Code) if guess == "cheat" else False
 
-            if guess == "admin" :
+            if guess == "admin":
                 adminCheck = True
-                print("Admin mode activated. Type 'cheat' to reveal the secret code.")  
+                print("Admin mode activated. Type 'cheat' to reveal the secret code.")
                 guess = input()
-            if guess == "cheat" and adminCheck == True :
+            if guess == "cheat" and adminCheck is True:
                 show_Secret(secret_Code)
-            else : 
+            else:
                 False
         black, white = get_Feedback(secret_Code, guess)
         print(f"Black pegs (correct position): {black}, White pegs (wrong position): {white}")
