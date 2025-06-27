@@ -30,7 +30,7 @@ def get_Feedback(secret, guess):
 def show_Secret(mystery):
     print(mystery)
 
-    
+
 def play_Mastermind():
     print("Welcome to Mastermind!")
     print("Guess the 4-digit code. Each digit is from 1 to 6. You have 10 attempts.")
