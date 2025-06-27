@@ -19,4 +19,4 @@ jobs:
           pip install flake8
  
       - name: Run flake8
-        run: flake8 badlint.py
+        run: flake8 master_Mind.py
