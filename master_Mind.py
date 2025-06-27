@@ -25,8 +25,12 @@ def get_Feedback(secret, guess):
     white_Pegs = sum(min(secret_Counts.get(d, 0), guess_Counts.get(d, 0)) for d in guess_Counts)
 
     return black_Pegs, white_Pegs
+
+
 def show_Secret(mystery):
     print(mystery)
+
+    
 def play_Mastermind():
     print("Welcome to Mastermind!")
     print("Guess the 4-digit code. Each digit is from 1 to 6. You have 10 attempts.")
@@ -50,7 +54,7 @@ def play_Mastermind():
 
 
 if __name__ == "__main__":
-    again='Y'
-    while again=='Y':
+    again = 'Y'
+    while again == 'Y':
         play_Mastermind()
-        again  = input(f"Play again (Y/N) ?").upper()
+        again = input("Play again (Y/N) ?").upper()
