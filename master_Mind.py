@@ -47,7 +47,7 @@ def play_Mastermind():
             show_Secret(secret_Code) if guess == "cheat" else False
 
             show_Secret(secret_Code) if guess == "cheat" else False
-
+            adminCheck = False
             if guess == "admin":
                 adminCheck = True
                 print("Admin mode activated. Type 'cheat' to reveal the secret code.")
