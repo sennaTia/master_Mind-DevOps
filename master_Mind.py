@@ -16,7 +16,9 @@ def get_Feedback(secret, guess):
     # Count whites by subtracting black and calculating min digit frequency match
     secret_Counts = {}
     guess_Counts = {}
+    
     for s, g in zip(secret, guess):
+
         if s != g:
             secret_Counts[s] = secret_Counts.get(s, 0) + 1
             guess_Counts[g] = guess_Counts.get(g, 0) + 1
