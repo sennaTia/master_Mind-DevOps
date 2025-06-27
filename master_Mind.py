@@ -16,7 +16,7 @@ def get_Feedback(secret, guess):
     # Count whites by subtracting black and calculating min digit frequency match
     secret_Counts = {}
     guess_Counts = {}
-    
+
     for s, g in zip(secret, guess):
 
         if s != g:
@@ -47,8 +47,10 @@ def play_Mastermind():
             print(f"Congratulations! You guessed the code: {''.join(secret_Code)}")
             return
     print(f"Sorry, you've used all attempts. The correct code was: {''.join(secret_Code)}")
-if __name__ == "__main__" :
+
+
+if __name__ == "__main__":
     again='Y'
-    while again=='Y' :
+    while again=='Y':
         play_Mastermind()
         again  = input(f"Play again (Y/N) ?").upper()
